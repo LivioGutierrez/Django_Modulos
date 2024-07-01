@@ -9,7 +9,7 @@ def crear_chofer(pRut, pNombre, pApellido, pActivo, pCreacion_registro):
     chofer.save()
 
 def crear_registro_contable(pFecha_compra, pValor):
-    registro_contable = crear_registro_contable(fecha_compra = pFecha_compra, pValor = pValor)
+    registro_contable = registro_contable(fecha_compra = pFecha_compra, pValor = pValor)
     registro_contable.save()
 
 def deshabilitar_chofer():
