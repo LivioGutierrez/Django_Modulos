@@ -28,7 +28,7 @@ class Estudiante(models.Model):
     creado_por = models.CharField(max_length=50, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    curso = models.ForeignKey(Curso, null= False, blank= False,related_name='estudiantes', on_delete=models.CASCADE )
+    curso = models.ForeignKey(Curso, related_name='estudiantes', on_delete=models.CASCADE )
 
 class Direccion(models.Model):
     calle = models.CharField(max_length = 50, null=False) 
@@ -37,4 +37,4 @@ class Direccion(models.Model):
     comuna = models.CharField(max_length=50, null=False)
     ciudad = models.CharField(max_length=50, null= False)
     region = models.CharField(max_length=50, null= False)
-    estudiante = models.OneToOneField(Estudiante, related_name='direcciones', null= False, on_delete=models.CASCADE)
+    estudiante = models.OneToOneField(Estudiante, related_name='direcciones', on_delete=models.CASCADE)
