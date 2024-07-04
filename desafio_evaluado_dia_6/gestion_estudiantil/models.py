@@ -32,7 +32,7 @@ class Estudiante(models.Model):
 
 class Direccion(models.Model):
     calle = models.CharField(max_length = 50, null=False) 
-    numero = models.IntegerField(max_length=10, null=False)
+    numero = models.IntegerField(null=False) # me pide quitar el max_length=10,
     dpto = models.CharField(max_length=10, default="")
     comuna = models.CharField(max_length=50, null=False)
     ciudad = models.CharField(max_length=50, null= False)
