@@ -26,8 +26,6 @@ class Estudiante(models.Model):
     creacion_registro = models.DateTimeField()
     modificacion_registro = models.DateTimeField()
     creado_por = models.CharField(max_length=50, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
     curso = models.ForeignKey(Curso, related_name='estudiantes', on_delete=models.CASCADE )
 
 class Direccion(models.Model):
